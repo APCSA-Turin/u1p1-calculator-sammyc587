@@ -5,15 +5,24 @@ public class TipCalculator {
     //WRITE YOUR PROGRAM IN calculateTip
     public static String calculateTip(int people, int percent, double cost) { //You must use these  variable in your calculations
         //DO NOT DELETE ANY OF THE CODE BELOW      
-
+        double tip = cost * ((double)percent/100);
+        // I learned how to round using Math.round from https://stackoverflow.com/questions/11701399/round-up-to-2-decimal-places-in-java 
+        double tip2 = (double) Math.round(tip * 100) / 100;
+        double total = tip2 + cost;
+        double average = cost/(double)people;
+        double average2 = (double) Math.round(average * 100) /100;
+        double averageTip = tip2/(double)people;
+        double averageTip2 = (double) Math.round(averageTip * 100) / 100;
+        double averageCost = total/(double)people;
+        double averageCost2 = (double) Math.round(averageCost * 100) / 100;
         String result = "-------------------------------\n" +
-                       "Total bill before tip: $" + "" + "\n" +
-                       "Total percentage: " + "" + "%\n" +
-                       "Total tip: $" + "" + "\n" +
-                       "Total Bill with tip: $" + "" + "\n" +
-                       "Per person cost before tip: $" + "" + "\n" +
-                       "Tip per person: $" + "" + "\n" +
-                       "Total cost per person: $" + "" + "\n" +
+                       "Total bill before tip: $" + cost + "\n" +
+                       "Total percentage: " + percent + "%\n" +
+                       "Total tip: $" + tip2 + "\n" +
+                       "Total Bill with tip: $" + total + "\n" +
+                       "Per person cost before tip: $" + average2 + "\n" +
+                       "Tip per person: $" + averageTip2 + "\n" +
+                       "Total cost per person: $" + averageCost2 + "\n" +
                        "-------------------------------\n";
 
         return result;
@@ -48,7 +57,7 @@ public class TipCalculator {
         int people=10; 
         int percent=8;
         double cost=10.5;              
-        //System.out.println(calculateTip(people,percent,cost));
+        System.out.println(calculateTip(people,percent,cost));
         System.out.println(extraCredit(people, percent, cost));
     }
 }
