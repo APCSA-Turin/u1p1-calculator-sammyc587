@@ -30,24 +30,7 @@ public class TipCalculator {
 
     public static String extraCredit(int people, int percent, double cost) {
         return  "Extra credit not implemented";
-        //boolean condition = true;
-    
-        //  COPY AND PASTE YOUR PROGRAM FROM calculateTip() HERE 
-        
-        // the while loop condition is checked,
-        // and if TRUE, runs the code inside.
-        // when the code inside is done running, the condition is rechecked,
-        // and the loop repeats as long as the condition remains TRUE.
-        // when the condition becomes FALSE, it stops
-
-       // while (condition) {
-            //enter your code here 
-           // System.out.println("placeholder");
-           // condition = false;
-    
-       // }
-
-        //return result;
+       
     }
     
     
@@ -58,7 +41,7 @@ public class TipCalculator {
         int percent=8;
         double cost=10.5;              
         System.out.println(calculateTip(people,percent,cost));
-        //System.out.println(extraCredit(people, percent, cost));
+        System.out.println(extraCredit(people, percent, cost));
     }
 }
         
