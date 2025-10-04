@@ -13,7 +13,7 @@ public class TipCalculator {
         double average2 = (double) Math.round(average * 100) /100;
         double averageTip = tip2/(double)people;
         double averageTip2 = (double) Math.round(averageTip * 100) / 100;
-        double averageCost = total/(double)people;
+        double averageCost = (cost + tip) / (double) people;
         double averageCost2 = (double) Math.round(averageCost * 100) / 100;
         String result = "-------------------------------\n" +
                        "Total bill before tip: $" + cost + "\n" +
@@ -30,7 +30,7 @@ public class TipCalculator {
 
     public static String extraCredit(int people, int percent, double cost) {
         String result = "Extra credit not implemented";
-        boolean condition = true;
+        //boolean condition = true;
     
         //  COPY AND PASTE YOUR PROGRAM FROM calculateTip() HERE 
         
@@ -40,14 +40,14 @@ public class TipCalculator {
         // and the loop repeats as long as the condition remains TRUE.
         // when the condition becomes FALSE, it stops
 
-        while (condition) {
+       // while (condition) {
             //enter your code here 
-            System.out.println("placeholder");
-            condition = false;
+           // System.out.println("placeholder");
+           // condition = false;
     
-        }
+       // }
 
-        return result;
+        //return result;
     }
     
     
@@ -58,7 +58,7 @@ public class TipCalculator {
         int percent=8;
         double cost=10.5;              
         System.out.println(calculateTip(people,percent,cost));
-        System.out.println(extraCredit(people, percent, cost));
+        //System.out.println(extraCredit(people, percent, cost));
     }
 }
         
