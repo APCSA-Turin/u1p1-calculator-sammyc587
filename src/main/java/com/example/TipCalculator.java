@@ -29,7 +29,7 @@ public class TipCalculator {
     }
 
     public static String extraCredit(int people, int percent, double cost) {
-        String result = "Extra credit not implemented";
+        return  "Extra credit not implemented";
         //boolean condition = true;
     
         //  COPY AND PASTE YOUR PROGRAM FROM calculateTip() HERE 
